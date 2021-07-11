@@ -1,0 +1,33 @@
+
+{%extends 'base.html' %}
+{%load static%}
+
+{%block title%}
+<title > Index page - Taskbar</title>
+ {% endblock title%}
+
+{%block content%}
+    <div class ="container">
+         <div class ="row mt-3">
+             <div class="col-lg-4 ">
+                 <img src="{%static 'images/notes.jpg'%}" alt="notes" class="shadow-sm p-3 mb-5 bg-body rounded" width=450" height="350">
+             </div>
+             <div class="col-lg-3">
+                 <img src="{%static 'images/notes1.jpg'%}" alt="notes1" class="shadow-sm p-3 mb-5 bg-body rounded" width="=350" height="350">
+             </div>
+             <div class="col-lg-3 ">
+                 <img src="{%static 'images/notes2.jpg'%}" alt="notes2" class="shadow-sm p-3 mb-5 bg-body rounded" width="=350" height="350">
+             </div>
+         </div>
+
+         <div class="row mt-3">
+             <div class="col-md-5 offset-md-4">
+                 <center><b><p class="h2 text-success"><b>Quick and Easy to Use,Anytime,Anywhere!</b></p></b></center>
+                  <center><p class="h4  mt-4">"Plan Your Day Better,Get Your Life Organized"</p></center>
+                 <center> <p class="h6 mt-2">TaskMate Lets You Keep Track of Your Task in One Place </p></center>
+                 <center><a href="{%url 'todolist'%}"> <button type="button" class="btn btn-primary btn-lg mt-5">Let's Get Started</button></a></center>
+             </div>
+         </div>
+
+    </div>
+ {%endblock content%}

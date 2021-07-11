@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+{%block title%}
+<title> Edit Task - Taskbar</title>
+ {% endblock title%}
+
+{%block content%}
+    <div class ="container">
+        </br>
+
+        {% if task_obj.manage == request.user %}
+            <form method="POST" class="row">
+            {%csrf_token%}
+                  <div class = "col-sm">
+                      <label class="col-lg-4">  Your Task </label>
+                  </div>
+                  <div class = "col-sm-7">
+                      <input type="text" class="form-control " name="task" placeholder="{{task_obj.task}}" value="{{task_obj.task}}">
+                      <input type="hidden"  name="done"  value="{{task_obj.done}}">
+                  </div>
+                  <div class = "col-sm-4">
+                      <button type="submit" class="btn btn-primary ">Update Task</button>
+                  </div>
+            </form>
+        {% else %}
+            <p>Restricted Page,You are not allowed to access this Page</p>
+        {%endif%}
+    </div>
+ {%endblock content%}
